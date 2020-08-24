@@ -7,17 +7,17 @@ class LogoInfo extends Component{
         return(
             <div className="logo-info">
                 <div className="logo-img-info">
-                    <img src={hoa}></img>
+                    <img alt='' src={hoa}></img>
                 </div>
                 <div className="name-title-info">
                     <b>Đoàn Thị Mai Hoa</b>
                 </div>
                 <div className='rank'>
-                <i class="fa fa-star fa-2x" aria-hidden="true"></i>
-                <i class="fa fa-star fa-2x" aria-hidden="true"></i>
-                <i class="fa fa-star fa-2x" aria-hidden="true"></i>
-                <i class="fa fa-star-o fa-2x" aria-hidden="true"></i>
-                <i class="fa fa-star-o fa-2x" aria-hidden="true"></i>
+                <i className="fa fa-star fa-2x" aria-hidden="true"></i>
+                <i className="fa fa-star fa-2x" aria-hidden="true"></i>
+                <i className="fa fa-star fa-2x" aria-hidden="true"></i>
+                <i className="fa fa-star-o fa-2x" aria-hidden="true"></i>
+                <i className="fa fa-star-o fa-2x" aria-hidden="true"></i>
                 </div>
             </div>   
         )

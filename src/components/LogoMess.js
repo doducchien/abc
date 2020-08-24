@@ -7,7 +7,7 @@ class LogoMess extends Component{
         return(
             <div className="logo-mess">
                 <div className="logo-img">
-                    <img src={hoa}></img>
+                    <img alt='' src={hoa}></img>
                 </div>
                 <div className="name-title-mess">
                     <b>Đoàn Thị Mai Hoa</b>
