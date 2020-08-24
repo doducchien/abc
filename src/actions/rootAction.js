@@ -22,7 +22,7 @@ export const action_openAppointment = () =>{
     }
 }
 
-export const action_openAppointment = () =>{
+export const action_closeAppointment = () =>{
     return{
         type: constrain.closeAppointment
     }

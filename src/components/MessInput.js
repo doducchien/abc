@@ -4,14 +4,12 @@ import * as action from '../actions/rootAction'
 import ModalCamera from './ModalCamera';
 
 class MessInput extends Component {
-    constructor(props){
-        super(props);
-        this.state = {
-            isShowCamera: false,
-        }
-    }
+   
     openCamera = () =>{
         this.props.openCamera()
+    }
+    openAppointment = () =>{
+        this.props.openAppointment()
     }
     render() {
         console.log('messinput')
@@ -31,7 +29,7 @@ class MessInput extends Component {
                     </label>
 
                     <i className="fa fa-microphone fa-lg" aria-hidden="true"></i>
-                    <i className="fa fa-clock-o fa-lg" aria-hidden="true"></i>
+                    <i onClick={this.openAppointment} className="fa fa-clock-o fa-lg" aria-hidden="true"></i>
                 </div>
                 <div className='input-like'>
                     <form>
@@ -48,8 +46,10 @@ const mapDispatchToProps = (dispatch)=>{
     return{
         openCamera: ()=>{
             dispatch(action.action_openCamera())
+        },
+        openAppointment: ()=>{
+            dispatch(action.action_openAppointment())
         }
     }
 }
 export default connect(null, mapDispatchToProps) (MessInput);
-//

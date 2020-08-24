@@ -4,12 +4,12 @@ var isShowAppointment = false;
 const showAppointmentReducer = (state = isShowAppointment, action)=>{
     switch(action.type){
         case constrain.openAppointment:{
-            var copyState = state;
+            var copyState = {...state};
             copyState = true;
             return copyState;
         }
         case constrain.closeAppointment:{
-            var copyState = state;
+            var copyState = {...state};
             copyState = false;
             return copyState;
         }

@@ -8,7 +8,7 @@ import isOnlineReducer from './isOnlineReducer';
 import isOpenCameraReducer from './isOpenCameraReducer'
 
 import isShowInfoReducer from './isShowInfoReducer';
-import showAppointmentReducer from './isshowAppointmentReducer';
+import showAppointmentReducer from './isShowAppointmentReducer';
 
 const rootReducer = combineReducers({
     user: userReducer,

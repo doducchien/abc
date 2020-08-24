@@ -4,11 +4,19 @@ import Modal from 'react-modal'
 import DatePicker from 'react-datepicker'
 import "react-datepicker/dist/react-datepicker.css";
 
+import * as action from '../actions/rootAction'
+
 class ModalAppointment extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            date: new Date()
+            date: new Date(),
+            isShowAppointment: false
+        }
+    }
+    componentWillReceiveProps = (nextProps) =>{
+        if(nextProps.isShowAppointment != this.state.isShowAppointment){
+            this.setState({isShowAppointment: nextProps.isShowAppointment})
         }
     }
     render() {
@@ -27,12 +35,13 @@ class ModalAppointment extends Component {
         }
         return (
             <Modal
+                ariaHideApp={false}
                 style={style}
-                isOpen={true}
+                isOpen={this.state.isShowAppointment}
             >
                 <div className='modal-appointment'>
                     <span>Tạo lịch hẹn</span>
-                    <span><i className="fa fa-window-close fa-lg" aria-hidden="true"></i></span>
+                    <span><i onClick={this.closeAppointment} className="fa fa-window-close fa-lg" aria-hidden="true"></i></span>
 
                 </div>
                 <div><hr></hr></div>
@@ -111,7 +120,7 @@ class ModalAppointment extends Component {
                 </div>
                 <div className='modal-group-btn-date-picker'>
                     <div className='date-picker-button'>
-                        <button type="button" class="btn btn-default">Hủy</button>
+                        <button onClick={this.closeAppointment} type="button" class="btn btn-default">Hủy</button>
                         <button type="button" class="btn btn-info">Tạo</button>
                     </div>
 
@@ -125,5 +134,20 @@ class ModalAppointment extends Component {
     onChangeDate = (date) => {
         this.setState({ date: date })
     }
+    closeAppointment = ()=>{
+        this.props.closeAppointment();
+    }
+
 }
-export default connect(null, null)(ModalAppointment)
+const mapStateToProps = (state)=>{
+    return{
+        isShowAppointment: state.isShowAppointment
+    }
+}
+const mapDispatchToProps = (dispatch)=>{
+    return{
+        openAppointment: ()=> dispatch(action.action_openAppointment()),
+        closeAppointment: ()=> dispatch(action.action_closeAppointment())
+    }
+}
+export default connect(mapStateToProps, mapDispatchToProps)(ModalAppointment)

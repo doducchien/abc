@@ -15,7 +15,7 @@ class TitleControllerMess extends Component {
                 <i title='Cuộc gọi video' className="fa fa-video-camera fa-2x" aria-hidden="true" onClick={this.phoneCallVideo}></i>
                 <i title='Thông tin chi tiết' className="fa fa-info-circle fa-2x" aria-hidden="true" onClick={this.toggleInfoAll}></i>
                 <ModalCamera></ModalCamera>
-                <ModalAppointment></ModalAppointment>
+                <ModalAppointment></ModalAppointment>   
 
             </div>
         )
