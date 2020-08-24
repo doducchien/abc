@@ -8,6 +8,7 @@ import isOnlineReducer from './isOnlineReducer';
 import isOpenCameraReducer from './isOpenCameraReducer'
 
 import isShowInfoReducer from './isShowInfoReducer';
+import showAppointmentReducer from './showAppointmentReducer';
 
 const rootReducer = combineReducers({
     user: userReducer,
@@ -16,6 +17,7 @@ const rootReducer = combineReducers({
     friend: friendReducer,
     isOnline: isOnlineReducer,
     isShowInfo: isShowInfoReducer,
-    isOpenCamera: isOpenCameraReducer
+    isOpenCamera: isOpenCameraReducer,
+    isshowAppointment: showAppointmentReducer
 });
 export default rootReducer;

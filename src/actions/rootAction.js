@@ -15,3 +15,15 @@ export const action_closeCamera = () =>{
         type: constrain.closeCamera
     }
 }
+
+export const action_openAppointment = () =>{
+    return{
+        type: constrain.openAppointment
+    }
+}
+
+export const action_openAppointment = () =>{
+    return{
+        type: constrain.closeAppointment
+    }
+}
