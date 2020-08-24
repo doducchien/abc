@@ -8,7 +8,7 @@ import isOnlineReducer from './isOnlineReducer';
 import isOpenCameraReducer from './isOpenCameraReducer'
 
 import isShowInfoReducer from './isShowInfoReducer';
-import showAppointmentReducer from './showAppointmentReducer';
+import showAppointmentReducer from './isshowAppointmentReducer';
 
 const rootReducer = combineReducers({
     user: userReducer,
@@ -18,6 +18,6 @@ const rootReducer = combineReducers({
     isOnline: isOnlineReducer,
     isShowInfo: isShowInfoReducer,
     isOpenCamera: isOpenCameraReducer,
-    isshowAppointment: showAppointmentReducer
+    isShowAppointment: showAppointmentReducer
 });
 export default rootReducer;
