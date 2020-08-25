@@ -557,4 +557,7 @@ html, body{
     height: 50px;
     line-height: 50px;
 }
+.send-record{
+    cursor: pointer;
+}
 /* Modal mic */

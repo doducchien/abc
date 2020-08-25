@@ -4,6 +4,7 @@ import { connect } from 'react-redux'
 
 import React, { Component } from 'react';
 import * as action from '../actions/rootAction';
+import CountTime from './CountTime';
 
 class ModalMic extends Component {
     constructor(props) {
@@ -16,6 +17,7 @@ class ModalMic extends Component {
         }
     }
     closeMic = () => {
+        this.setState({record: false})
         this.props.closeMic()
     }
     toggleRecording = () => {
@@ -62,13 +64,7 @@ class ModalMic extends Component {
         catch{
             mic = 'no mic devices'
         }
-        var btn = this.state.isRecording ?
-            <button onClick={this.toggleRecording} type="button" className="btn btn-danger">
-                <i className="fa fa-microphone fa-2x" aria-hidden="true"></i>
-            </button>
-            : <button onClick={this.toggleRecording} type="button" className="btn btn-success">
-                <i className="fa fa-microphone fa-2x" aria-hidden="true"></i>
-            </button>
+
 
         var style = {
             content: {
@@ -100,14 +96,16 @@ class ModalMic extends Component {
                 {mic}
 
                 <div className='modal-react-mic-btn'>
-                    {btn}
+                    <button onClick={this.toggleRecording} type="button" className="btn btn-danger">
+                        <i className="fa fa-microphone fa-2x" aria-hidden="true"></i>
+                    </button>
                 </div>
                 <div className='group-time-icon'>
-                   
-                    <h4>00 : 00</h4>
-                   
+
+                    <CountTime></CountTime>
+
                 </div>
-                <span><i className="fa fa-send-o fa-2x" aria-hidden="true"></i></span>
+                <span className='send-record'><i className="fa fa-send-o fa-2x" aria-hidden="true"></i></span>
 
             </Modal>
 
