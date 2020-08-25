@@ -2,7 +2,7 @@ import React, { Component } from "react";
 
 import LogoInfo from './LogoInfo';
 import SpecialMess from './SpecialMess'
-import { connect } from "react-redux";
+// import { connect } from "react-redux";
 
 class Info extends Component{
   

@@ -122,25 +122,25 @@ class Section extends React.Component {
                     Go to second element inside container
         </Link>
 
-        <Element name="test7" className="element" id="containerElement" style={{
+                <Element name="test7" className="element" id="containerElement" style={{
                     position: 'relative',
                     height: '200px',
                     overflow: 'scroll',
                     marginBottom: '100px'
                 }}>
 
-            <Element name="firstInsideContainer" style={{
+                    <Element name="firstInsideContainer" style={{
                         marginBottom: '200px'
                     }}>
                         first element inside container
           </Element>
 
-            <Element name="secondInsideContainer" style={{
+                    <Element name="secondInsideContainer" style={{
                         marginBottom: '200px'
                     }}>
                         second element inside container
           </Element>
-        </Element>
+                </Element>
 
 
                 <Element id="same" className="element">

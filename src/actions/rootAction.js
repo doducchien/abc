@@ -27,3 +27,13 @@ export const action_closeAppointment = () =>{
         type: constrain.closeAppointment
     }
 }
+export const action_openMic = ()=>{
+    return{
+        type: constrain.openMic
+    }
+}
+export const action_closeMic = ()=>{
+    return{
+        type: constrain.closeMic
+    }
+}

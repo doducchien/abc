@@ -18,7 +18,7 @@ const isShowInfoReducer = (state = isShowInfoState, action)=>{
         }
         default:{
             
-            return {state}
+            return {...state}
         }
     }
 }

@@ -3,7 +3,7 @@ import TitleMess from './TitleMess'
 import Messing from "./Messing";
 import MessInput from './MessInput'
 import Info from './Info';
-import {connect} from 'react-redux'
+// import {connect} from 'react-redux'
 class ContentMess extends Component {
     constructor(props){
         super(props);

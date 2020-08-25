@@ -2,22 +2,21 @@ import * as contrain from '../constrains/const';
 var isOpenCameraState = false;
 
 var isOpenCameraReducer = (state = isOpenCameraState, action)=>{
+    var copyState;
     switch(action.type){
         case contrain.openCamera: {
-            var copyState = {...state};
-            copyState = true;
+            copyState = true
             return copyState;
 
         }
         case contrain.closeCamera: {
-            console.log('hihi')
-            var copyState = {...state};
-            copyState = false;
+            copyState = false
             return copyState;
 
         }
         default:{
-            return {...state}
+            copyState = state
+            return copyState;
         }
     }
 }

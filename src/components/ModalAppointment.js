@@ -15,11 +15,13 @@ class ModalAppointment extends Component {
         }
     }
     componentWillReceiveProps = (nextProps) =>{
-        if(nextProps.isShowAppointment != this.state.isShowAppointment){
+      
+        if(nextProps.isShowAppointment !== this.state.isShowAppointment){
             this.setState({isShowAppointment: nextProps.isShowAppointment})
         }
     }
     render() {
+     
         var style = {
             content: {
                 width: '800px',
@@ -37,11 +39,11 @@ class ModalAppointment extends Component {
             <Modal
                 ariaHideApp={false}
                 style={style}
-                isOpen={this.state.isShowAppointment}
+                isOpen={Boolean( this.state.isShowAppointment)}
             >
                 <div className='modal-appointment'>
                     <span>Tạo lịch hẹn</span>
-                    <span><i onClick={this.closeAppointment} className="fa fa-window-close fa-lg" aria-hidden="true"></i></span>
+                    <span><i onClick={this.closeAppointment} className="fa fa-close fa-lg" aria-hidden="true"></i></span>
 
                 </div>
                 <div><hr></hr></div>
@@ -54,24 +56,24 @@ class ModalAppointment extends Component {
                 </div>
                 <div>
 
-                    <nav class="navbar navbar-default" role="navigation">
+                    <nav className="navbar navbar-default" role="navigation">
 
-                        <div class="navbar-header">
-                            <p class="navbar-brand person-service">Người cung cấp dịch vụ</p>
+                        <div className="navbar-header">
+                            <p className="navbar-brand person-service">Người cung cấp dịch vụ</p>
                         </div>
 
 
-                        <div class="collapse navbar-collapse navbar-ex1-collapse">
+                        <div className="collapse navbar-collapse navbar-ex1-collapse">
 
-                            <ul class="nav navbar-nav navbar-right">
+                            <ul className="nav navbar-nav navbar-right">
 
-                                <li class="dropdown">
-                                    <a class="dropdown-toggle drop-person" data-toggle="dropdown">Đỗ Đức Chiến <b class="caret"></b></a>
-                                    <ul class="dropdown-menu">
-                                        <li><a href="#">Ngọc Trinh</a></li>
-                                        <li><a href="#">Ngân 98</a></li>
-                                        <li><a href="#">Maria Ozawa</a></li>
-                                        <li><a href="#">Yui Hatano</a></li>
+                                <li className="dropdown">
+                                    <a className="dropdown-toggle drop-person" data-toggle="dropdown">Đỗ Đức Chiến <b className="caret"></b></a>
+                                    <ul className="dropdown-menu">
+                                        <li><a >Ngọc Trinh</a></li>
+                                        <li><a >Ngân 98</a></li>
+                                        <li><a >Maria Ozawa</a></li>
+                                        <li><a >Yui Hatano</a></li>
                                     </ul>
                                 </li>
                             </ul>
@@ -94,23 +96,23 @@ class ModalAppointment extends Component {
                 </DatePicker>
                 <div className='laplai'>
 
-                    <nav class="navbar navbar-default" role="navigation">
+                    <nav className="navbar navbar-default" role="navigation">
 
-                        <div class="navbar-header">
-                            <p class="navbar-brand person-service">Lặp lại</p>
+                        <div className="navbar-header">
+                            <p className="navbar-brand person-service">Lặp lại</p>
                         </div>
 
 
-                        <div class="collapse navbar-collapse navbar-ex1-collapse">
+                        <div className="collapse navbar-collapse navbar-ex1-collapse">
 
-                            <ul class="nav navbar-nav navbar-right">
+                            <ul className="nav navbar-nav navbar-right">
 
-                                <li class="dropdown">
-                                    <a class="dropdown-toggle drop-person" data-toggle="dropdown">Không lặp lại<b class="caret"></b></a>
-                                    <ul class="dropdown-menu">
-                                        <li><a href="#">Lặp lại hàng tuần</a></li>
-                                        <li><a href="#">Lặp lại hàng tháng</a></li>
-                                        <li><a href="#">Lặp lại hàng năm</a></li>
+                                <li className="dropdown">
+                                    <a className="dropdown-toggle drop-person" data-toggle="dropdown">Không lặp lại<b className="caret"></b></a>
+                                    <ul className="dropdown-menu">
+                                        <li><a>Lặp lại hàng tuần</a></li>
+                                        <li><a>Lặp lại hàng tháng</a></li>
+                                        <li><a>Lặp lại hàng năm</a></li>
 
                                     </ul>
                                 </li>
@@ -120,8 +122,8 @@ class ModalAppointment extends Component {
                 </div>
                 <div className='modal-group-btn-date-picker'>
                     <div className='date-picker-button'>
-                        <button onClick={this.closeAppointment} type="button" class="btn btn-default">Hủy</button>
-                        <button type="button" class="btn btn-info">Tạo</button>
+                        <button onClick={this.closeAppointment} type="button" className="btn btn-default">Hủy</button>
+                        <button type="button" className="btn btn-info">Tạo</button>
                     </div>
 
 

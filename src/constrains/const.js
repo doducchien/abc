@@ -5,3 +5,5 @@ export const openCamera = 'openCamera';
 export const closeCamera = 'closeCamera';
 export const openAppointment = 'openAppointment';
 export const closeAppointment = 'closeAppointment';
+export const openMic = 'openMic';
+export const closeMic = 'closeMic'

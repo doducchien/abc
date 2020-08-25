@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import ListMess from './ListMess'
 import ContentMess from './ContentMess';
-import ModalAppointment from './ModalAppointment'
+// import ModalAppointment from './ModalAppointment'
 class Home extends Component {
     render() {
         return (

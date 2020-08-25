@@ -47,9 +47,9 @@ class MessArea extends Component {
         var i;
         
         if(nameSearch === ''){
-            
+            var online;
             for(i = 0; i < lenghtLoad; i++){
-                var online = isOnline.find((item)=>{
+                online = isOnline.find((item)=>{
                     if(item.id === listMess[i].idTalker){
                         return 1;
                     }
@@ -60,8 +60,9 @@ class MessArea extends Component {
         }
         else{
             for(i = 0; i < listMess.length; i++){
+                var online;
                 if(listMess[i].nameMess.toLowerCase().indexOf(nameSearch.toLowerCase()) !== -1){
-                    var online = isOnline.find((item)=>{
+                    online = isOnline.find((item)=>{
                         if(item.id === listMess[i].idTalker) return 1;
                     })
                     result.push(<Mess isOnline={online ? true : false} key={i} nameMess={listMess[i].nameMess}></Mess>);
@@ -75,7 +76,7 @@ class MessArea extends Component {
             
             <div className='mess-area' ref='myscroll'>
                 {result}
-                {this.state.isLoadding ? <h3 style={{ textAlign: 'center' }}>....Loadding....</h3> : ''}
+                {this.state.isLoadding ? <h3 style={{ textAlign: 'center' }}>...........</h3> : ''}
 
             </div>
 

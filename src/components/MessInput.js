@@ -1,25 +1,28 @@
 import React, { Component } from "react";
-import {connect} from 'react-redux';
+import { connect } from 'react-redux';
 import * as action from '../actions/rootAction'
-import ModalCamera from './ModalCamera';
+// import ModalCamera from './ModalCamera';
 
 class MessInput extends Component {
-   
-    openCamera = () =>{
+
+    openCamera = () => {
         this.props.openCamera()
     }
-    openAppointment = () =>{
+    openAppointment = () => {
         this.props.openAppointment()
     }
+    openMic = () =>{
+        this.props.openMic();
+    }
     render() {
-        console.log('messinput')
+
         return (
             <div className='mess-input' style={this.props.style}>
-                
+
                 <div className='icons-input'>
                     <i className="fa fa-smile-o fa-lg" aria-hidden="true"></i>
 
-                    <label >
+                    <label>
                         <i className="fa fa-file-image-o fa-lg" aria-hidden="true"></i>
                         <input type="file" accept="*" multiple="" style={{ display: "none" }} />
                     </label>
@@ -28,7 +31,7 @@ class MessInput extends Component {
                         <i onClick={this.openCamera} className="fa fa-camera fa-lg" aria-hidden="true"></i>
                     </label>
 
-                    <i className="fa fa-microphone fa-lg" aria-hidden="true"></i>
+                    <label><i onClick={this.openMic} className="fa fa-microphone fa-lg" aria-hidden="true"></i></label>
                     <i onClick={this.openAppointment} className="fa fa-clock-o fa-lg" aria-hidden="true"></i>
                 </div>
                 <div className='input-like'>
@@ -42,14 +45,17 @@ class MessInput extends Component {
         )
     }
 }
-const mapDispatchToProps = (dispatch)=>{
-    return{
-        openCamera: ()=>{
+const mapDispatchToProps = (dispatch) => {
+    return {
+        openCamera: () => {
             dispatch(action.action_openCamera())
         },
-        openAppointment: ()=>{
+        openAppointment: () => {
             dispatch(action.action_openAppointment())
+        },
+        openMic: () =>{
+            dispatch(action.action_openMic())
         }
     }
 }
-export default connect(null, mapDispatchToProps) (MessInput);
+export default connect(null, mapDispatchToProps)(MessInput);
