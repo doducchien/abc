@@ -12,7 +12,6 @@ class ModalMic extends Component {
         this.state = {
             isOpenMic: false,
             record: false,
-            isRecording: false
 
         }
     }
@@ -22,11 +21,11 @@ class ModalMic extends Component {
     }
     toggleRecording = () => {
         var record = this.state.record;
-        var isRecording = this.state.isRecodding;
-        this.setState({ record: !record, isRecording: !isRecording })
+        this.setState({ record: !record});
+       // setInterval(()=>{console.log(1)},1000)
     }
     onStop = (r) => {
-        console.log("stop", r)
+        // console.log("stop", r)
     }
     // onData = (r) =>{
     //     console.log('ondata', r)
@@ -48,6 +47,7 @@ class ModalMic extends Component {
 
     render() {
         var mic;
+        var record = this.state.record;
         try {
             mic =
                 <ReactMic
@@ -102,7 +102,7 @@ class ModalMic extends Component {
                 </div>
                 <div className='group-time-icon'>
 
-                    <CountTime></CountTime>
+                    <CountTime start={record}></CountTime>
 
                 </div>
                 <span className='send-record'><i className="fa fa-send-o fa-2x" aria-hidden="true"></i></span>

@@ -4,34 +4,45 @@ class CountTime extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            count: 1195
+            count: 0,
+            
         }
+        this.call = null;
     }
-    componentDidMount = () => {
-        setInterval(() => {
-            this.setState({ count: this.state.count + 1 })
-        }, 1000)
-
-
+    componentWillReceiveProps = (nextProps) => {
+        var record = nextProps.start;
+        if (record === true) {
+             this.call = setInterval(() => {
+                var y = this.state.count + 1;
+                this.setState({ count: y })
+            }, 1000);
+        }
+        else {
+            clearInterval(this.call)
+        }
 
     }
+
+
+
+
+
     render() {
+
         var count = this.state.count
         var second2 = count % 10;
-        var second1 = (count % 60 - second2)/10;
-        var hour2 = Math.floor( count / 60) % 10;
-        var hour1 = Math.floor( Math.floor( count / 60) / 10)
-        // console.log(hour1 + hour2 + " : " + second1 + second2)
-        // console.log(count)
+        var second1 = (count % 60 - second2) / 10;
+        var hour2 = Math.floor(count / 60) % 10;
+        var hour1 = Math.floor(Math.floor(count / 60) / 10)
+
         return (
             <div>
-                <h4>{hour1 + "" +  hour2 + " : " + second1 + "" + second2}</h4>
-              
+                <h4>{hour1 + "" + hour2 + " : " + second1 + "" + second2}</h4>
+
             </div>
 
         )
     }
-
 }
 export default CountTime;
 
