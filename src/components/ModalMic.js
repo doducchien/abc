@@ -105,7 +105,7 @@ class ModalMic extends Component {
                     <CountTime start={record}></CountTime>
 
                 </div>
-                <span className='send-record'><i className="fa fa-send-o fa-2x" aria-hidden="true"></i></span>
+                <span onClick={this.closeMic} className='send-record'><i className="fa fa-send-o fa-2x" aria-hidden="true"></i></span>
 
             </Modal>
 
