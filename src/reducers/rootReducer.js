@@ -9,7 +9,9 @@ import isOpenCameraReducer from './isOpenCameraReducer'
 
 import isShowInfoReducer from './isShowInfoReducer';
 import showAppointmentReducer from './isShowAppointmentReducer';
-import isShowMicReducer from './isShowMicModalReducer'
+import isShowMicReducer from './isShowMicModalReducer';
+import isShowEmojiReducer from './isShowEmojiReducer';
+
 
 const rootReducer = combineReducers({
     user: userReducer,
@@ -20,6 +22,8 @@ const rootReducer = combineReducers({
     isShowInfo: isShowInfoReducer,
     isOpenCamera: isOpenCameraReducer,
     isShowAppointment: showAppointmentReducer,
-    isShowMic: isShowMicReducer
+    isShowMic: isShowMicReducer,
+    isShowEmoji: isShowEmojiReducer,
+
 });
 export default rootReducer;

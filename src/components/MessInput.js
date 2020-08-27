@@ -1,26 +1,40 @@
-import React, { Component } from "react";
+import React, { Component, PureComponent } from "react";
 import { connect } from 'react-redux';
 import * as action from '../actions/rootAction'
 // import ModalCamera from './ModalCamera';
 
-class MessInput extends Component {
+import Emoji from './Emoji'
 
+class MessInput extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            isClickOnIconEmoji: false,
+        }
+    }
+   
     openCamera = () => {
         this.props.openCamera()
     }
     openAppointment = () => {
         this.props.openAppointment()
     }
-    openMic = () =>{
+    openMic = () => {
         this.props.openMic();
     }
+    openEmoji = () => {
+        this.props.openEmoji();
+    }
+    
+
     render() {
 
         return (
             <div className='mess-input' style={this.props.style}>
-
+               
                 <div className='icons-input'>
-                    <i className="fa fa-smile-o fa-lg" aria-hidden="true"></i>
+                    <Emoji></Emoji>
+                    <i ref='iconEmojiArea' onClick={this.openEmoji} className="fa fa-smile-o fa-lg" aria-hidden="true"></i>
 
                     <label>
                         <i className="fa fa-file-image-o fa-lg" aria-hidden="true"></i>
@@ -53,9 +67,16 @@ const mapDispatchToProps = (dispatch) => {
         openAppointment: () => {
             dispatch(action.action_openAppointment())
         },
-        openMic: () =>{
+        openMic: () => {
             dispatch(action.action_openMic())
-        }
+        },
+        openEmoji: ()=>{
+            dispatch(action.action_openEmoji())
+        },
+        closeEmoji:()=>{
+            dispatch(action.action_closeEmoji())
+        },
+      
     }
 }
 export default connect(null, mapDispatchToProps)(MessInput);

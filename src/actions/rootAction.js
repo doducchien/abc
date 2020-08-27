@@ -37,3 +37,15 @@ export const action_closeMic = ()=>{
         type: constrain.closeMic
     }
 }
+export const action_openEmoji = ()=>{
+    return{
+        type: constrain.openEmoji
+    }
+}
+export const action_closeEmoji = ()=>{
+    return{
+        type: constrain.closeEmoji
+    }
+}
+
+    

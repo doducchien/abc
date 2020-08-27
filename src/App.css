@@ -227,7 +227,7 @@ html, body{
 }
 .content-text-2 p{
     width: fit-content;
-    background-color: rgb(146, 56, 119);
+    background-color: rgb(117, 115, 117);
     color: white;
     padding: 10px;
     border-radius: 20px;
@@ -252,6 +252,8 @@ html, body{
     width: 55vw;
     
 }
+
+
 .icons-input{
     width: fit-content;
 }
@@ -259,7 +261,7 @@ html, body{
     cursor: pointer;
     width: 30px;
     text-align: center;
-    color:  rgb(45, 175, 12);
+    color:  rgb(133, 9, 91);
 }
 .input-like{
     width: 100%;
@@ -561,3 +563,29 @@ html, body{
     cursor: pointer;
 }
 /* Modal mic */
+
+/* Emoji */
+.emoji{
+    position: fixed;
+    bottom: 80px;
+    height: 220px;
+    width: 250px;
+    padding:2px;
+
+    border: 1px solid black;
+    z-index: 10000;
+    background-color: cornsilk;
+}
+.emoji li{
+    cursor: pointer;
+    list-style: none;
+    display: inline-block;
+    width: 30px;
+    height: fit-content;
+    text-align: center;
+}
+.emoji li:hover {
+    -webkit-transform: scale(1.5); transform: scale(1.5);
+}
+
+/* Emoji */
