@@ -10,13 +10,145 @@ html, body{
     padding: 0;
     box-sizing: border-box;
 }
+
+/* header */
+.header{
+    
+    position: fixed;
+    width: 100vw;
+    height: 50px;
+    top: 0;
+}
+.header-component{
+    width: 100vw;
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    box-shadow: 2px 2px 2px black;
+}
+
+.header-left{
+    display: inline-block;
+    width: 24.5vw;
+    display: flex;
+    line-height: 50px;
+}
+.header-left img{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 2px solid black
+
+}
+.header-left span{
+    width: 100px;
+    text-align: center;
+    font-weight: 700;
+    font-size: large;
+}
+.header-left form{
+    display: inline-block;
+    width: calc(24.5vw - 50px - 100px);
+}
+.header-left form input{
+    width: calc(24.5vw - 50px - 100px);
+    height: 30px;
+    border-radius: 20px;
+    border: 1px solid black;
+    text-align: center;
+}
+.header-middle{
+    /* display: inline-block; */
+    width: 50vw;
+    display: flex;
+    justify-content: space-between;
+    
+}
+.header-middle i{
+    line-height: 50px;
+}
+
+.header-right{
+    display: inline-block;
+    width: 19.5vw;
+    display: flex;
+    justify-content: space-between;
+}
+.header-right img{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    line-height: 50px;
+}
+.header-right i{
+    display: inline-block;
+    line-height: 50px;
+    width: 30px;
+}
+.user-header{
+    width: 120px;
+}
+.user-header span{
+    display: inline-block;
+    width: 70px;
+    text-align: center;
+    font-weight: 500;
+    font-size: large;
+
+}
+/* header */
+
+/* home-calendar */
+.home-calendar{
+    width: 100vw;
+    height: calc(100vh - 55px);
+    position: fixed;
+    top: 55px;
+    
+}
+.left-calendar{
+    width: 24.5vw;
+}
+.create-calendar{
+    height: 50px;
+    width: 24.5vw;
+    border: 1px solid black;
+    border-radius: 20px;
+    text-align: center;
+    position: relative;
+}
+.create-calendar span{
+    line-height: 50px;
+}
+.create-calendar i{
+    position: absolute;
+    
+}
+/* home-calendar */
+
+.content{
+    position: fixed;
+    top: 50px;
+    height: calc(100vh - 50px);
+    width: 100vw;
+}
+.home-mess{
+    height: calc(100vh-50px);
+    width: 100vw;
+}
 .left-app{
+   height: calc(100vh - 50px);
    padding-left: 5px;
+   width: 24.5vw;
+}
+.right-app{
+    height: calc(100vh - 50px);
 }
 
 .list-mess{
     z-index: 0;
     position: fixed;
+    top:50px;
     width: 24.5vw;
     padding-top: 10px;
     /* border-bottom: 3px solid green; */
@@ -77,7 +209,7 @@ html, body{
 .mess-area{
     overflow-x: hidden;
     overflow-y: auto;
-    height: 87vh;
+    height: calc(100vh - 120px);
     position: fixed;
     bottom: 1px;
     width: 24.5vw;
@@ -97,6 +229,7 @@ html, body{
     margin-top: 20px;
     transition: 0.2s;
     
+    
 } 
 
 .mess:hover{
@@ -112,6 +245,7 @@ html, body{
     width: 50px;
     border-radius: 50%;
     vertical-align: bottom;
+    
 }
 .content-mess-area{
     padding: 2px;
@@ -119,8 +253,15 @@ html, body{
     display: inline-block;
     vertical-align: bottom;
 }
+
+
+.right-app{
+    height: calc(100vh - 50px);
+}
+
 .content-mess{
     padding:5px;
+    top: 50px;
     position: fixed;
     width: 75vw;
     left: 25vw;
@@ -133,7 +274,7 @@ html, body{
     position: relative;
     z-index: 2;
     background-color: white;
-    box-shadow:1px 1px 1px 1px #000;
+    box-shadow:2px 2px 2px 2px #000;
     
 }
 .logo-mess{
@@ -194,9 +335,10 @@ html, body{
     width: 55vw;
     overflow-y: auto;
     
-    height: 80vh;
+    height: calc(100vh - 50px - 70px - 70px);
     position: fixed;
-    bottom: 60px;
+    top: 120px
+    /* bottom: 60px; */
     /* border-top: 1px solid gray; */
 }
 .content-mess-1{
@@ -248,9 +390,7 @@ html, body{
     height: 60px;
     position: fixed;
     bottom: 0;
- 
     width: 55vw;
-    
 }
 
 
@@ -572,7 +712,8 @@ html, body{
     width: 250px;
     padding:2px;
 
-    border: 1px solid black;
+    /* border: 1px solid black; */
+    box-shadow: 0 10px 20px -10px rgba(0, 0, 0, 0.42), 0 4px 25px 0px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.2);
     z-index: 10000;
     background-color: cornsilk;
 }

@@ -74,7 +74,8 @@ class ModalMic extends Component {
                 margin: 'auto',
                 textAlign: 'center',
                 borderRadius: '20px',
-                border: '2px solid black',
+                // border: '2px solid black',
+                boxShadow: "0 10px 20px -10px rgba(0, 0, 0, 0.42), 0 4px 25px 0px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.2)",
                 posistion: 'relative',
                 overflow: 'hidden'
             }

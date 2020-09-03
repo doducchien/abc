@@ -24,11 +24,11 @@ class TitleControllerMess extends Component {
         )
     }   
     phoneCall = () => {
-        window.open('/phonecall', 'newwindow ', "top=0, left=0, width=600px,height=600px")
+        window.open('/mess/phonecall', 'newwindow ', "top=0, left=0, width=600px,height=600px")
     }
     
     phoneCallVideo = ()=>{
-        window.open('/phonecallvideo', 'newwindow','top=0, left=800, width=600px,height=600px')
+        window.open('/mess/phonecallvideo', 'newwindow','top=0, left=800, width=600px,height=600px')
     }
     toggleInfoAll = () =>{
         this.props.toggleInfoAll();
